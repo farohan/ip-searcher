@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address</title>
+</head>
+<body style="font-family: 'Courier New', Courier, monospace;">
+    <h1 style="font-size: 3.5rem; text-align: center;">IP ADDRESS</h1>
+    <p id="ip-address" style="text-align: center; font-size: large;"></p>
+
+    <script type="application/javascript">
+        let paragraph = document.getElementById('ip-address');
+
+        function getIP(json) {
+            paragraph.innerHTML = `My IP Address is ${json.ip}`;
+        }
+    </script>
+
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</body>
+</html>
