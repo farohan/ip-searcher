@@ -11,3 +11,28 @@ p {
     text-align: center;
     font-size: large;
 }
+
+#search-form {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label,
+input {
+    margin: 10px;
+}
+
+input,
+#submit {
+    height: 2rem;
+    width: 30vw;
+}
+
+@media screen and (max-width: 750px) {
+    input, #submit {
+      width: 60vw;
+    }
+}
