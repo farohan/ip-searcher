@@ -12,6 +12,14 @@
     <p id="ip-address"></p>
     <p id="ip-data"></p>
 
+    <form id="search-form">
+        <label for="searcher">Search an IP address: </label>
+        <input id="search-bar" name="searcher" type="text" maxlength="50">
+        <button id="submit" type="submit">Search</button>
+    </form>
+
+    <p id="searched-ip"></p>
+
     <script type="application/javascript" src="app.js"></script>
     <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 </body>
