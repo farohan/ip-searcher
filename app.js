@@ -1,3 +1,5 @@
+//Created by Farohan
+
 //Finding the IP address of the device
 
 const ipAddress = document.getElementById('ip-address');
@@ -15,4 +17,23 @@ ipData.innerHTML = `<a href='${url}'> View IP Address Data </a>`;
 
 //Search up IP Addresses
 
-//Thanks to the Ipify API and the IP-API!
+const searchForm = document.getElementById('search-form');
+const searchBar = document.getElementById('search-bar');
+const submit = document.getElementById('submit');
+const result = document.getElementById('searched-ip');
+
+function formHandler(event) {
+    event.preventDefault();
+}
+
+searchForm.addEventListener('submit', formHandler);
+
+function getIPData() {
+    let addr = searchBar.value;
+    let newURL = `http://ip-api.com/json/${addr}`;
+    result.innerHTML = `<a href="${newURL}"> View Searched IP Address Data </a>`;
+}
+
+submit.addEventListener('click', getIPData);
+
+//Thank you to the Ipify API and the IP-API!
